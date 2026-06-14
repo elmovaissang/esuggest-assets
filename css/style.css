@@ -1,6 +1,4 @@
-/* =============================================
-   VARIABLES CSS
-   ============================================= */
+/* ===== VARIABLES CSS ===== */
 :root {
     /* Couleurs */
     --bg-primary: #0f0f23;
@@ -33,9 +31,7 @@
     --backdrop-filter: blur(10px);
 }
 
-/* =============================================
-   RESET + BASE
-   ============================================= */
+/* ===== RESET + BASE ===== */
 * {
     margin: 0;
     padding: 0;
@@ -53,17 +49,20 @@ html, body {
     flex-direction: column;
 }
 
-/* =============================================
-   TYPOGRAPHIE
-   ============================================= */
+/* ===== TYPOGRAPHIE ===== */
 h1, h2, h3 {
     font-family: var(--font-heading);
     font-weight: 600;
     color: var(--text-primary);
 }
 
-h1 { font-size: 2rem; margin-bottom: var(--spacing-md); }
-h2 { font-size: 1.5rem; margin-bottom: var(--spacing-md); }
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
 
 a {
     color: var(--accent-primary);
@@ -71,18 +70,14 @@ a {
     transition: color var(--transition);
 }
 
-/* =============================================
-   LOGO
-   ============================================= */
-.logo {
+/* ===== LOGO ===== */
+.logo img {
     height: 40px;
     width: auto;
     display: block;
 }
 
-/* =============================================
-   LAYOUT (header, main, footer)
-   ============================================= */
+/* ===== LAYOUT ===== */
 .header {
     background: var(--bg-secondary);
     backdrop-filter: var(--backdrop-filter);
@@ -137,16 +132,6 @@ a {
     background: var(--accent-error) !important;
 }
 
-.header-container .logo {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 700;
-    background: linear-gradient(90deg, var(--accent-primary), #00cec9);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
 .main-content {
     flex: 1;
 }
@@ -158,9 +143,7 @@ a {
     padding: var(--spacing-lg);
 }
 
-/* =============================================
-   BOUTONS (style unifié)
-   ============================================= */
+/* ===== BOUTONS ===== */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -199,18 +182,11 @@ a {
 
 .btn-delete:hover {
     background: #c82333;
-    color: var(--text-primary);
 }
 
 .btn-cancel {
     background: var(--bg-tertiary);
-    color: var(--text-primary);
     border: 1px solid var(--border-glass);
-}
-
-.btn-cancel:hover {
-    background: var(--border-glass);
-    color: var(--text-primary);
 }
 
 /* Boutons dans les tableaux */
@@ -222,30 +198,29 @@ a {
     line-height: 1.6;
 }
 
-/* =============================================
-   ACTIONS (boutons d'action)
-   ============================================= */
+/* ===== ACTIONS ===== */
 .actions-section {
     margin-bottom: var(--spacing-lg);
 }
 
-.actions {
+.actions,
+.table-actions {
     display: flex;
     gap: var(--spacing-sm);
     flex-wrap: wrap;
+}
+
+.actions {
     margin-top: var(--spacing-sm);
 }
 
 .table-actions {
-    display: flex;
     gap: 0.25rem;
-    flex-wrap: wrap;
 }
 
-/* =============================================
-   FORMULAIRES
-   ============================================= */
-.form, .form-max-width {
+/* ===== FORMS ===== */
+.form, 
+.form-max-width {
     max-width: 600px;
     margin: 0 auto;
 }
@@ -296,9 +271,7 @@ a {
     flex-wrap: wrap;
 }
 
-/* =============================================
-   CARTES
-   ============================================= */
+/* ===== CARDS ===== */
 .card {
     background: var(--bg-tertiary);
     backdrop-filter: var(--backdrop-filter);
@@ -319,9 +292,7 @@ a {
     margin-right: var(--spacing-xs);
 }
 
-/* =============================================
-   TABLEAUX
-   ============================================= */
+/* ===== ARRAY ===== */
 .table-container {
     margin: var(--spacing-lg) 0;
 }
@@ -336,7 +307,8 @@ table {
     box-shadow: var(--box-shadow);
 }
 
-th, td {
+th,
+td {
     padding: var(--spacing-sm) var(--spacing-md);
     text-align: left;
 }
@@ -356,12 +328,9 @@ tr:hover {
     background: rgba(255, 255, 255, 0.05);
 }
 
-/* =============================================
-   MESSAGES (erreur, succès)
-   ============================================= */
-.error {
-    background: rgba(225, 112, 85, 0.2);
-    color: var(--accent-error);
+/* ===== MESSAGES ===== */
+.error,
+.success {
     padding: var(--spacing-sm) var(--spacing-md);
     border-radius: var(--border-radius-sm);
     margin-bottom: var(--spacing-md);
@@ -369,18 +338,19 @@ tr:hover {
     backdrop-filter: var(--backdrop-filter);
 }
 
+.error {
+    background: rgba(225, 112, 85, 0.2);
+    color: var(--accent-error);
+    border-color: var(--accent-error);
+}
+
 .success {
     background: rgba(0, 206, 201, 0.2);
     color: #00cec9;
-    padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: var(--border-radius-sm);
-    margin-bottom: var(--spacing-md);
-    border-left: 4px solid #00cec9;
+    border-color: #00cec9;
 }
 
-/* =============================================
-   LOGIN
-   ============================================= */
+/* ===== LOGIN ===== */
 .login-container {
     max-width: 400px;
     margin: var(--spacing-xl) auto;
@@ -395,9 +365,7 @@ tr:hover {
     box-shadow: var(--box-shadow);
 }
 
-/* =============================================
-   FOOTER
-   ============================================= */
+/* ===== FOOTER ===== */
 .main-footer {
     background: var(--bg-secondary);
     backdrop-filter: var(--backdrop-filter);
@@ -452,9 +420,7 @@ tr:hover {
     font-size: 0.875rem;
 }
 
-/* =============================================
-   ACCESSIBILITÉ
-   ============================================= */
+/* ===== ACCESSIBILITÉ ===== */
 button:focus,
 a:focus,
 input:focus,
@@ -463,9 +429,7 @@ select:focus {
     outline-offset: 2px;
 }
 
-/* =============================================
-   RESPONSIVE
-   ============================================= */
+/* ===== MESSAGES ===== */
 @media (max-width: 768px) {
     .container {
         width: 95%;
@@ -487,13 +451,9 @@ select:focus {
         text-align: center;
     }
 
-    .actions {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
+    .actions,
     .table-actions {
         flex-direction: column;
-        gap: 0.25rem;
+        align-items: flex-start;
     }
 }
